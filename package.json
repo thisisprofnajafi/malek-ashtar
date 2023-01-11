@@ -2,7 +2,8 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "test:tsc": "vue-tsc --noEmit"
     },
     "devDependencies": {
         "@inertiajs/inertia": "^0.11.0",
@@ -14,9 +15,34 @@
         "axios": "^0.25",
         "laravel-vite-plugin": "^0.4.0",
         "lodash": "^4.17.19",
+        "plyr": "3.6.8",
         "postcss": "^8.4.18",
         "tailwindcss": "^3.2.1",
+        "unplugin-vue-components": "^0.19.6",
         "vite": "^2.9.11",
-        "vue": "^3.2.41"
+        "vue": "^3.2.41",
+        "vue-tsc": "^0.36.0",
+        "yorkie": "2.0.0"
+    },
+    "dependencies": {
+        "@vue/compiler-sfc": "^3.2.36",
+        "@vueform/multiselect": "2.2.0",
+        "@vueform/slider": "2.0.5",
+        "@vueuse/core": "6.5.3",
+        "@vueuse/head": "0.6.0",
+        "bulma": "^0.9.4",
+        "bulma-css-vars": "^0.8.0",
+        "dragula": "3.7.3",
+        "dropzone": "5.9.3",
+        "font-awesome": "^4.7.0",
+        "ionicons": "^6.0.4",
+        "notyf": "^3.10.0",
+        "typescript": "^4.9.4",
+        "vite-plugin-full-reload": "^1.0.5",
+        "vue-i18n": "9.2.0-beta.11",
+        "vue-router": "4.0.10",
+        "vue-scrollto": "2.20.0",
+        "vue-tippy": "6.0.0-alpha.33",
+        "yup": "0.32.9"
     }
 }

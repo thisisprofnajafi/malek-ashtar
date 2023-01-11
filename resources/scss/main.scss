@@ -1,0 +1,55 @@
+@import './bulma-generated/generated-vars.sass';
+@import './css-variables/all';
+
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+@import '../../node_modules/bulma-css-vars/bulma-cv-lib';
+@import '../../node_modules/bulma/sass/base/_all.sass';
+@import '../../node_modules/bulma/sass/elements/_all.sass';
+@import '../../node_modules/bulma/sass/form/_all.sass';
+@import '../../node_modules/bulma/sass/components/_all.sass';
+@import '../../node_modules/bulma/sass/grid/_all.sass';
+@import '../../node_modules/bulma/sass/helpers/_all.sass';
+@import '../../node_modules/bulma/sass/layout/_all.sass';
+
+@import 'extensions/all';
+
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'fonts/fontawsome.scss';
+
+@import 'layout/navigation';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+@import 'layout/forms';
+
+@import 'components/buttons';
+@import 'components/crousel';
+@import 'components/slider';
+
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/contact';
+
+@import 'themes/theme';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    height: 100vh;
+}
+
+#app {
+    height: 100%;
+}
