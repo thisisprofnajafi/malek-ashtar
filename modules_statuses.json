@@ -1,0 +1,16 @@
+{
+    "Admin": true,
+    "Auth": true,
+    "Comment": true,
+    "ContactUs": true,
+    "Home": true,
+    "Menu": true,
+    "Permission": true,
+    "Post": true,
+    "PostCategory": true,
+    "Role": true,
+    "Setting": true,
+    "Slide": true,
+    "User": true,
+    "VideoGallery": true
+}
