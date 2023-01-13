@@ -2,21 +2,21 @@
 
 namespace App\Models;
 
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Fortify\TwoFactorAuthenticatable;
-use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Modules\Admin\Entities\Notification;
+use Spatie\Permission\Traits\HasPermissions;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use HasApiTokens;
-    use HasFactory;
-    use HasProfilePhoto;
-    use Notifiable;
-    use TwoFactorAuthenticatable;
+    use HasApiTokens, HasFactory, Notifiable, HasRoles,HasPermissions, Sluggable, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -25,8 +25,14 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'first_name',
+        'last_name',
         'email',
         'password',
+        'mobile',
+        'profile_photo_path',
+        'activation',
+        'slug',
     ];
 
     /**
@@ -37,8 +43,6 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
-        'two_factor_recovery_codes',
-        'two_factor_secret',
     ];
 
     /**
@@ -51,11 +55,40 @@ class User extends Authenticatable
     ];
 
     /**
-     * The accessors to append to the model's array form.
-     *
-     * @var array<int, string>
+     * Generate slug from defined source field
      */
-    protected $appends = [
-        'profile_photo_url',
-    ];
+    public function sluggable(): array {
+        // TODO: Implement sluggable() method.
+        return [
+            'slug' => [
+                'source' => ['email', 'id'],
+                'includeTrashed' => true,
+            ]
+        ];
+    }
+
+    /**
+     * Accessors & Mutators
+     */
+    // full name using first and last names
+    public function fullName(): Attribute {
+        return Attribute::make(
+            get: fn() => ($this->first_name !== null) ? "$this->first_name $this->last_name" : Null,
+        );
+    }
+
+
+    // user activation
+    public function activeUser(): Attribute {
+        return Attribute::make(
+            get: fn() => $this->activation == 1,
+        );
+    }
+
+    /**
+     * Relations
+     */
+    public function notifications() {
+        return $this->morphMany(Notification::class, 'notifiable');
+    }
 }
