@@ -17,7 +17,8 @@
                             <img alt="{{ auth()->user()->fullname ?? auth()->user()->name }}" src="{{ (auth()->user()->profile_photo_url) }}" class="avatar avatar-xl brround">
                             <span class="avatar-status profile-status bg-green"></span>
                         @else
-                            <img alt="{{ auth()->user()->fullname ?? auth()->user()->name }}" src="{{ (auth()->user()->profile_photo_url) }}" class="avatar avatar-xl brround">
+{{--                            <img alt="{{ auth()->user()->fullname ?? auth()->user()->name }}" src="{{ (auth()->user()->profile_photo_url) }}" class="avatar avatar-xl brround">--}}
+                            <img alt="{{ auth()->user()->fullname ?? auth()->user()->name }}" src="https://ui-avatars.com/api/?background=0D8ABC&color=fff&name={{ auth()->user()->fullname ?? auth()->user()->name }}" class="avatar avatar-xl brround">
                             <span class="avatar-status profile-status bg-green"></span>
                         @endif
                     </div>

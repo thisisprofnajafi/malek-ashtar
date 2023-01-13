@@ -154,7 +154,9 @@
                             @if(auth()->user()->profile_photo_path)
                                 <img alt="{{ auth()->user()->fullname ?? auth()->user()->name }}" src="{{ (auth()->user()->profile_photo_url) }}">
                             @else
-                                <img alt="{{ auth()->user()->fullname ?? auth()->user()->name }}" src="{{ (auth()->user()->profile_photo_url) }}">
+                                <img alt="{{ auth()->user()->fullname ?? auth()->user()->name }}" src="https://ui-avatars.com/api/?background=0D8ABC&color=fff&name={{ auth()->user()->fullname ?? auth()->user()->name }}">
+
+{{--                                <img alt="{{ auth()->user()->fullname ?? auth()->user()->name }}" src="{{ (auth()->user()->profile_photo_url) }}">--}}
                             @endif
                         </a>
                         <div class="dropdown-menu">
@@ -164,7 +166,9 @@
                                         @if(auth()->user()->profile_photo_path)
                                             <img alt="{{ auth()->user()->fullname ?? auth()->user()->name }}" src="{{ (auth()->user()->profile_photo_url) }}">
                                         @else
-                                            <img alt="{{ auth()->user()->fullname ?? auth()->user()->name }}" src="{{ (auth()->user()->profile_photo_url) }}">
+                                            <img alt="{{ auth()->user()->fullname ?? auth()->user()->name }}" src="https://ui-avatars.com/api/?background=0D8ABC&color=fff&name={{ auth()->user()->fullname ?? auth()->user()->name }}">
+
+{{--                                            <img alt="{{ auth()->user()->fullname ?? auth()->user()->name }}" src="{{ (auth()->user()->profile_photo_url) }}">--}}
                                         @endif
                                     </div>
                                     <div class="ms-3 my-auto">
