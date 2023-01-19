@@ -1,3 +1,4 @@
+<<<<<<< HEAD:public/css/app.css
 @charset "UTF-8";
 :root {
   --danger: rgb(230, 41, 100);
@@ -28259,15 +28260,8 @@ Some colors are not here because they are overriden with bulma-css-var package.
   grid-template-columns: 8rem 15rem auto;
 }
 
+=======
+>>>>>>> ce90f39a332a9d0c5e47de77a4dd3ea11361fd3a:resources/css/app.css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-  height: 100vh;
-}
-
-#app {
-  height: 100%;
-}
-
-/*# sourceMappingURL=app.css.map */
