@@ -284,3 +284,83 @@
   border: 1px solid var(--fade-grey-dark-3);
   transition: all 0.3s;
 }
+
+@mixin media_for_xl {
+    @media screen and (min-width: 2000px) {
+        @content
+    }
+}
+
+@mixin media_for_lg {
+    @media screen and (max-width: 1200px) {
+        @content
+    }
+}
+
+@mixin media_for_1100 {
+    @media screen and (max-width: 1100px) {
+        @content
+    }
+}
+@mixin media_for_1000 {
+    @media screen and (max-width: 1000px) {
+        @content
+    }
+}
+@mixin media_for_900 {
+    @media screen and (max-width: 900px) {
+        @content
+    }
+}
+
+@mixin media_for_800 {
+    @media screen and (max-width: 800px) {
+        @content
+    }
+}
+
+@mixin media_for_md {
+    @media screen and (max-width: 760px) {
+        @content
+    }
+}
+
+@mixin media_for_700 {
+    @media screen and (max-width: 700px) {
+        @content
+    }
+}
+
+@mixin media_for_600 {
+    @media screen and (max-width: 600px) {
+        @content
+    }
+}
+
+@mixin media_for_500 {
+    @media screen and (max-width: 500px) {
+        @content
+    }
+}
+
+@mixin media_for_400 {
+    @media screen and (max-width: 400px) {
+        @content
+    }
+}
+
+@mixin media_for_sm {
+    @media screen and (max-width: 360px) {
+        @content
+    }
+}
+@mixin shadow-1 {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.06), 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+@mixin shadow-2 {
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+@mixin shadow-3 {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+

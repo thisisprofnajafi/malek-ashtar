@@ -1,0 +1,42 @@
+.yad-btn{
+    background: #3dd28d;
+    color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+    transition: all .2s;
+    ion-icon {
+        font-size: 1.5rem;
+        @include media_for_md {
+            font-size: 1.2rem;
+            padding: 0.2rem;
+        }
+    }
+}
+
+.yad-i-btn{
+    ion-icon {
+        width: 2rem;
+        height: 2rem;
+        background: #3dd28d;
+        color: #fff;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+        padding: 1rem;
+        border-radius: 2rem;
+        transition: all .2s;
+        font-size: 1.5rem;
+        @include media_for_md {
+            font-size: 1.2rem;
+            padding: 0.2rem;
+        }
+
+        &:hover{
+            opacity: 0.8;
+        }
+
+        &:active{
+            transform: scale(0.95);
+        }
+    }
+}
